@@ -35,6 +35,8 @@ if(age === '30'){
 
 // else if conditional statement
 // Used n a scenario where there is more than two conditional statement
+// And also using the AND operator
+// In this case if both conditions are true then the conditions are passed 
 let currentime = 20
 
 if (currentime > 0 && currentime <= 6){
@@ -46,3 +48,32 @@ if (currentime > 0 && currentime <= 6){
 }else{
     console.log("INVALID")
 }
+
+// OR OPERATOR
+// If either of the condiotions are true, the condition is passed 
+
+let cash = 300,
+    credit = 300,
+    cartTotal = 500;
+    available = cash + credit
+
+if (cash>=cartTotal || credit>=cartTotal){
+    console.log('Pay using cash or credit')
+} else if (available >= cartTotal){
+    console.log('Pay using both')
+}
+else{
+    console.log('Insufficient Funds')
+}
+
+// Ternary Operator
+// It is the shortcut for the if-else statement 
+
+let authenticated = true
+
+let nextURL = authenticated ? 
+
+    alert("Welcome to  the admin page") :
+
+    alert("Not logged in!! Please Log in")
+
