@@ -77,3 +77,42 @@ let nextURL = authenticated ?
 
     alert("Not logged in!! Please Log in")
 
+// SWITCH STATEMENT
+// It is same as if statements
+
+let paymentMethod = prompt("Please enter your payment method choice: ")
+    cartTotal = 300
+
+switch(paymentMethod){
+    case 'cash' :
+       amount = prompt("Input Amount: ")
+       balance = amount - cartTotal
+       console.log (`Balance = ${balance}`)
+       break; 
+
+    case 'cheque' :
+        submit = prompt(" Are you sure you want to submit the cheque?")
+
+        if (submit == 'yes'){
+            console.log('Checking validity of the cheque')
+            console.log('Check valid. Processing payment...')
+        }
+        else{
+            console.log('Please select a valid payment method')
+        }
+        break;
+
+
+    case 'card' :
+        auth = prompt("Enter your password")
+        password = '123'
+
+        if (auth == password){
+            console.log('Password correct. Processing payment')
+        } else{
+            console.log('Password Incorrect, Please try again')
+        }
+        break;
+    default :
+        console.log("Please select a valid payment method")
+}
