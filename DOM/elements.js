@@ -45,3 +45,28 @@ console.log(btn)
 let tag = document.getElementsByTagName('h2')
 
 console.log(tag)
+
+// QUERY SELECTOR
+
+// Its divide into two i.e querySelector() and querySelectorAll()
+/* It does allow you to find the first element that is 
+descendant of the parent element on which it is invoked that matches a CSS seletor or a group of CSS selectors */
+
+// structure
+// let element = parentNode.querySelector(selector)
+
+// is the selector invoked is not valid a syntax error will be raised and if no element matches, the querySelector() returns a null value
+
+// Examples
+
+// universal selector
+let element = document.querySelector('*')
+// type selector
+    element = document.querySelector('h1')
+// class selector
+    element = document.querySelector('.inputs')
+// id selector
+    element = document.querySelector('#polls')
+
+console.log(element)
+
