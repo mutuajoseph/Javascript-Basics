@@ -39,3 +39,28 @@ console.log(nextSIbling)
     previousSibling = list.previousElementSibling
 
     console.log(previousSibling)
+
+// Get the first child element, last child element and all children of a specified element 
+
+// To get the first child element of a specified element, you use the firstChild prperty of the element 
+/* The firstChild property returns a child node which can be any node type such as an element node,
+ a text node, or a comment node. 
+*/
+
+let content = document.getElementById('menu')
+let firstChild = content.firstChild.nodeName
+// getting the fitst child element
+    firstChild = content.firstElementChild
+// geting the last child element
+    lastChild = content.lastElementChild
+// getting all child nodes
+    children =content.children
+console.log(lastChild)
+console.log(firstChild)
+console.log(children)
+
+/*    
+The firstChild and lastChild return the first and last child of a node, which can be any node type including text node, comment node, and element node.
+The firstElementChild and lastElementChild return the first and last child Element node.
+The childNodes returns a live NodeList of all child nodes of any node type of a specified node. The children return all child Element nodes of a specified node.
+*/
