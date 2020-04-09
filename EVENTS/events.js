@@ -90,3 +90,82 @@ The event object is accessible only within the event listener.
 Use preventDefault() method to prevent the default behavior of an event, but does not stop the event flow.
 Use stopPropagation() method to stop the flow of an event through the DOM tree, but does not cancel the browser default behavior.
 */
+
+// HANDLING EVENTS IN JS
+
+// An event handler/ event listener listens to the event and respaonds accordingly to the event fires
+
+// Ways To Assign Event Handlers
+    // HTML event handler attributes 
+    // DOM Level 0 event handlers
+    // DOM lEVEL 2 event handlers
+
+// HTML event handler attributes
+
+/* To assign an event handler to an event associated with an HTML element
+you can use an HTML attribute with the name of the event handler
+*/
+
+// i.e <input type='button' value='Save' onclick="alert('Clicked')">
+
+// An event handler defined in the HTML can call a function defined in a script
+
+/*
+ <script>
+    function showAlert(){
+        alert('Clicked')
+    }
+ </script>
+
+ <input type="button" value="Save" onclick="showAlert()">
+*/
+
+
+// DOM Level 0 event handlers
+
+//  Every single element has event handler properties and to assign the event handler, you set the property to a function as shows below
+
+// We can also acces the properties inside the element
+// This is because the function becomes the method of the button element
+
+let level = document.querySelector('#level')
+
+level.onclick = function(event){
+    alert(this.id)
+}
+
+// DOM LEVEL 2 EVENT HANDLERS
+
+// It provides two main methods for dealing with the registering and deregistering of event listenerss
+
+    // addEventListener() - register an event handler 
+    // removeEventListener() - remove an event handler 
+
+// addEventListener method accepts three arguments
+    // An event name
+    // An event handler function
+    // A Boolean value that instructs the method to call the event handler suring the capture phase or during the bubble phase 
+
+// removeEventListener method removes an event listener that was added via the addEventListener method
+// Same arguments are passed 
+
+let success = document.querySelector('#success')
+
+success.addEventListener('click', function(e){
+    alert('Congragulations!! Youve Won 1000000$')
+})
+
+success.addEventListener('click', successFunc)
+
+function successFunc(e){
+    alert(e.type)
+}
+
+// Remove the event 
+success.removeEventListener('click', successFunc )
+
+// Summary 
+/*
+There are three ways to assign an event handler: HTML event handler attribute, element’s event handler property, and addEventListener().
+Assign an event handler via the HTML event handler attribute should be avoided.
+*/

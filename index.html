@@ -39,9 +39,20 @@
     <p id="message"> Please rate the service</p>
     </div>
     
+    <div class="mennu">
+        <ul id="mennu">
+            <li id="home"><a href="#">Home</a></li>
+            <li id="dashboard"><a href="#">Dashboard</a></li>
+            <li id="report"><a href="#">Report</a></li>
+        </ul>
+    </div>
+
     <div id="eventlistener">
         <button id="click">Click Me!</button>
         <button id='pizza'>Yes</button>
+        <button id='level'>Level Up</button>
+        <button id='success'> Click to Win $$</button>
+        <button id='select'>Click me yes</button>
     </div>
 
     <p class="inputs" id="polls">
@@ -61,5 +72,26 @@
     <script src="/DOM/traversing.js"></script>
     <script src="/DOM/creatingElements.js"></script>
     <script src="/EVENTS/events.js"></script>
+    <script src="/EVENTS/mouseEvents.js"></script>
+    <script src="/EVENTS//eventDelegation.js"></script>
+    <script>
+        addEventListener('DOMContentLoaded', (e) => {
+            console.log('The DOM is fully loaded')
+        })
+
+        addEventListener('load', (e) => {
+            console.log('The page is fully loaded')
+        })
+
+        addEventListener('beforeunload', (e) => {
+            event.preventDefault();
+
+            event.returnValue = '';
+        })
+
+        addEventListener('unload', (e) => {
+            
+        })
+    </script>
 </body>
 </html>
